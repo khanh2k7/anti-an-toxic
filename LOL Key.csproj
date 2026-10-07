@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <RootNamespace>LolKey</RootNamespace>
+    <AssemblyName>Anti Ăn Toxic (AUT)</AssemblyName>
+    <Product>Anti Ăn Toxic (AUT)</Product>
+    <AssemblyTitle>Anti Ăn Toxic (AUT)</AssemblyTitle>
+    <Description>Anti Ăn Toxic (AUT) - Bộ gõ Tiếng Việt &amp; Chống Toxic</Description>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+
+    <!-- Single-File Standalone Settings -->
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="toxic_dict.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <Target Name="ObfuscateBeforeBundle" BeforeTargets="_ComputeFilesToBundle" Condition="'$(Configuration)' == 'Release'">
+    <Message Text="[SECURITY] Dang thuc hien ma hoa va obfuscate ma nguon bang Obfuscar..." Importance="high" />
+    <Exec Command="obfuscar.console &quot;$(MSBuildProjectDirectory)\obfuscar.xml&quot;" />
+    <Copy SourceFiles="$(TargetDir)obfuscated\$(TargetFileName)" DestinationFiles="$(TargetDir)$(TargetFileName)" OverwriteReadOnlyFiles="true" />
+  </Target>
+
+</Project>

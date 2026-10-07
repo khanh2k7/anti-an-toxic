@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Obfuscator>
+  <Var name="InPath" value=".\bin\Release\net10.0-windows\win-x64" />
+  <Var name="OutPath" value=".\bin\Release\net10.0-windows\win-x64\obfuscated" />
+  <Var name="KeepPublicApi" value="false" />
+  <Var name="HideStrings" value="true" />
+  <Var name="RenameProperties" value="true" />
+  <Var name="RenameEvents" value="true" />
+  <Var name="RenameFields" value="true" />
+  <Var name="UseUnicodeNames" value="false" />
+  <Var name="HidePrivateApi" value="true" />
+  
+  <Module file="$(InPath)\Anti Ăn Toxic (AUT).dll">
+    <SkipType name="LolKey.Program" />
+    <SkipType name="LolKey.MainForm" />
+  </Module>
+</Obfuscator>

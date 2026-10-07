@@ -1,0 +1,21 @@
+## Build and output
+[Bb]in/
+[Oo]bj/
+[Bb]uild/*.exe
+[Bb]uild/*.rar
+[Bb]uild/*.pdb
+*.log
+startup_error.log
+app.log
+
+## Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## OS generated
+Thumbs.db
+Desktop.ini
+.DS_Store

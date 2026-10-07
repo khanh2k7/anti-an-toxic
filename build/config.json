@@ -1,0 +1,16 @@
+﻿{
+  "EnableVietnamese": true,
+  "Method": 0,
+  "EncodingCharset": 0,
+  "SwitchKey": 0,
+  "SpellCheck": false,
+  "ModernTonePlacement": true,
+  "FreeMarking": true,
+  "IsEnabled": false,
+  "Mode": 0,
+  "HotkeyIndex": 0,
+  "SoundEnabled": false,
+  "RescuedCount": 41,
+  "StartWithWindows": true,
+  "ShowWindowOnStartup": true
+}
